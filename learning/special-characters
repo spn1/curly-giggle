@@ -1,0 +1,14 @@
+#!/user/bin/bash -x
+
+echo "I am $LOGNAME"
+echo 'I am $LOGNAME' # Text within '' has a literal meaning - it wont be interpretted differently by bash
+
+echo "This device is called $(hostname)"
+echo 'This device is called $(hostname)'
+
+echo 5 + 5
+echo "5 + 5"
+echo $((5 + 5))
+
+echo "Is 5 greater than 4? $((5 > 4))"
+(( 5 > 4 )) && echo "Five is greater than Four!"

@@ -1,0 +1,30 @@
+#!/user/bin/bash -x
+
+if [ $# -lt 2 ]
+then
+  echo
+  echo "Please input the two files you want to compare as command line arguments"
+  exit 1
+fi
+
+left=();
+right=();
+
+echo "> Files for comparison: ${1} ${2}"
+
+echo
+echo " --- Left: ---"
+while IFS=$'\n';read -r line;
+do
+  left+=("$line")
+done < ${1}
+
+for var in ${left[*]}; do echo $var; done
+
+echo " --- Right: ---"
+while IFS=$'\n';read -r line;
+do
+  right+=("$line")
+done < ${2}
+
+for var in ${right[*]}; do echo $var; done

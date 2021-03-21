@@ -1,4 +1,5 @@
 #!/bin/bash
+# Greets the User
 
 user=$(whoami)
 day=$(date +%A)

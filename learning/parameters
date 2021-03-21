@@ -1,0 +1,43 @@
+#!/user/bin/bash -x
+
+name="spencer newton"
+
+echo name
+echo $name # Using $ is called Parameter Expansion
+echo "My name is name"
+echo "My name is $name"
+
+echo
+
+# Parameters
+echo The following parameters were passed to this script:
+echo $1 $2 $3 $4 $5 $6 $7 $8 $9
+echo $*
+echo "Process ID: $$"
+
+for param in $*
+do
+    echo $param
+done
+
+echo
+echo "======"
+echo
+
+firstname="spenker"
+lastname="spooton"
+let middlename
+
+echo "Substitution: ${middlename:-$lastname}"
+echo "Assignment & Substitution: ${middlename:=$firstname}"
+middlename=
+
+echo "If-then: ${firstname:+$lastname}"
+
+echo "Substring 1: ${lastname:1:4}"
+echo "Substring 2: ${lastname:1}"
+echo "Substring 3: ${firstname:(-5)}"
+echo "Array Subset: ${@:4}"
+echo "Array Length: Number of Parameters ${#@}"
+echo "Pattern Match: ${@#first}"
+echo "Pattern Match: ${lastname#poot}"
