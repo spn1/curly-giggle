@@ -86,3 +86,34 @@ print(fruit_prices['banana'])
 print(1, 2, 3, 4)
 print(1, 2, 3, 4, sep='*')
 # print(1, 2, 3, 4, sep='#', end='&')
+
+# Variable Substitution
+firstname='Spencer'
+lastname='Newton'
+print('I love {}s and {}s'.format(fruit[0], fruit[1]))
+print('Greetings {name}, how are you today?'.format(name=firstname))
+
+# User Input
+# num = input('Enter a Number: ')
+
+if (fruit[0] is 'Apple'): print('is Apply');
+if (fruit[0] is not 'Banana'): print('is not banana');
+if ('Apple' in fruit): print('contains apple');
+
+print('Memory Address of fruit: ', id(fruit));
+
+# if elif else
+# userinput=int(input('Enter Number: '));
+# if (userinput > 0):
+#     print('Greater Than Zero')
+# elif (userinput is 0):
+#     print('Is Zero');
+# else:
+#     print('Less Than Zero')
+
+# Else can be used at the end of a for loop to do something right at the end OR if can't be found
+print('The fruid I want to buy are: ')
+for f in fruit:
+    print(f)
+else:
+    print('I will go buy them now :)')
